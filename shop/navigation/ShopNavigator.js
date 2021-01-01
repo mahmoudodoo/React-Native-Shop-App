@@ -2,14 +2,26 @@ import { createStackNavigator} from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import ProductsOverviewScreen from '../screens/shop/ProductOverviewScreen';
 import Colors from '../constants/Colors';
-import { Platform } from 'react-native'
+import { Platform } from 'react-native';
+import ProductDetailScreen from '../screens/shop/ProductDetailScreen';
+
+
 
 const ProductsNavigator = createStackNavigator({
     ProductsOverview:ProductsOverviewScreen,
+    ProductDetail:ProductDetailScreen,
 },
     {defaultNavigationOptions: {
         headerStyle:{
             backgroundColor:Platform.OS ==='android' ? Colors.primary : '',
+        },
+        headerTitleStyle:{
+            fontFamily:'open-sans-bold',
+            color:'white',
+        },
+        headerBackTitleStyle:{
+            fontFamily:'open-sans',
+            color:'white',
         },
         headerThintColor:Platform.OS === 'android' ? 'white': Colors.primary
     }}
