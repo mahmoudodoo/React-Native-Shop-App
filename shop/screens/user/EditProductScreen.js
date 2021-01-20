@@ -108,7 +108,7 @@ const EditProductScreen = props => {
     }
 
     setIsLoading(false);
-    
+
   }, [dispatch, prodId, formState]);
 
   useEffect(() => {
